@@ -15,7 +15,7 @@ class PollView(APIView):
             polls = Poll.objects.all()
             serializer = serializers.PollSerializer(polls, many=True)
             return Response({"polls": serializer.data})
-        return HttpResponse("Only for registred users!")
+        return HttpResponse("Only for registered users!")
 
     def post(self, request):
             poll = request.data
