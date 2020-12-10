@@ -44,7 +44,6 @@ class Question(models.Model):
         return f'{self.question_text}, {self.question_type}'
 
     
-
 class QuestionOption(models.Model):
     question = models.ForeignKey('poll.Question', on_delete=models.CASCADE)
     question_option_name = models.CharField(max_length=500)
